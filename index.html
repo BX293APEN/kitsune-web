@@ -1,4 +1,5 @@
 <!doctype html>
+<html lang="ja">
 <html>
    <head>
       <meta charset="uft-8" />
@@ -20,16 +21,16 @@
 
    </head>
 
-  <body style="background-color:pink;">
+   <!--鑲入插件-->
+   <script src="./kitsune-parts-js/embeddedHTML.js"></script>
+
+   <body style="background-color:pink;">
 
      <!--ヘッダー-->
-     <header id="site-header">
-      <script> fetch("./kitsune-parts/header.html")
-         .then(res=>res.text())//HTML を取り込む
-         .then(html=>document.getElementById("site-header").insertAdjacentHTML("beforeend",html))</script>
-     </header>
+     <header id="header"> <script>
+     embedded_html("/kitsune-web/kitsune-parts/header.html", "header");</script></header>
      
-     <!---->
+     
      <nav>
       <ul><strong>
         <h3> <li><href="" title="まだにゃいゆ～">自己紹介</a></li></h3>
@@ -51,6 +52,8 @@
          </section>
       
       <section>   
+
+      <!--獨立章節-->
       <h2>うちの子</h2>
          <p>
          <a href="./image/paffe.jpg" 
@@ -63,6 +66,8 @@
          </section>
       
       <section>
+
+      <!--獨立章節-->   
       <h2>ただ今工事中だよ～🦊⛑️</h2>
          <img
           src="./image/nyu.jpg" alt="にゅ～💧 " style="width: 100%; height: auto;">
