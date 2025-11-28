@@ -21,15 +21,13 @@
    </head>
 
   <body style="background-color:pink;">
+   
      <!--ヘッダー-->
-     <header>
-     <a href="./image/夢の国のルシファー☆.jpg">
-       <img 
-        src="./image/top_1.jpg" alt="にゅ～💧" style="width: 100%; height: auto;"></a>
-
-     <!--ホームタイトル-->
-     <h1>きつねのワールド🏠🦊🌸🐈‍⬛</h1>
-     </header>
+     <script>
+      fetch(./kitsune-parts/header.html)
+       .then(res=>res.text())//HTML を取り込む
+       .then(html=>document.header.insertAdjacentHTML("beforeend",html))//head.html の中身を index.html の <head> に追加する
+      </script>
      
      <nav>
       <ul><strong>
