@@ -24,10 +24,12 @@
 
      <!--ヘッダー-->
      <header id="site-header">
-      <script src="./kitsune-parts-js/header.js"></script>
+      <script> fetch("./kitsune-parts/header.html")
+         .then(res=>res.text())//HTML を取り込む
+         .then(html=>document.getElementById("site-header").insertAdjacentHTML("beforeend",html))</script>
      </header>
      
-     <!--メニュー-->
+     <!---->
      <nav>
       <ul><strong>
         <h3> <li><href="" title="まだにゃいゆ～">自己紹介</a></li></h3>
